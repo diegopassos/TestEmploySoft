@@ -1,0 +1,52 @@
+﻿<html lang="en" ng-app="like" ng-controller="indexCtrl" class="ng-scope">
+<head>
+    <meta charset="utf-8">
+
+    <title>Teste - Employsoft</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="lib/Bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="header clearfix">
+            <h3 class="text-muted col-lg-9">Teste - Employsoft</h3>
+            <nav class="col-lg-3">
+                <ul class="nav nav-pills">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#/home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#/user/{{idUser}}">Your Preferences</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <!-- ngView: -->
+        <div class="body-content" ng-view></div>
+
+        <footer class="row footer">
+            <hr>
+            <p>© Diego Passos - Mar/2017</p>
+        </footer>
+
+    </div> <!-- /container -->
+    <!-- Angular -->
+    <script src="lib/Angular/angular.min.js"></script>
+    <script src="lib/Angular/angular-route.min.js"></script>
+    <script src="lib/Angular/angular-messages.min.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/config/routeConfig.js"></script>
+
+    <script src="js/controllers/indexCtrl.js"></script>
+    <script src="js/controllers/homeCtrl.js"></script>
+    <script src="js/controllers/imageCtrl.js"></script>
+    <script src="js/controllers/userCtrl.js"></script>
+
+    <script src="js/services/imageAPIService.js"></script>
+    <script src="js/services/userAPIService.js"></script>
+    
+</body>
+</html>

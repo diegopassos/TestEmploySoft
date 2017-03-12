@@ -1,0 +1,18 @@
+﻿<hr />
+<h4>Review Your Preferences</h4>
+<p>Review the images which you evatuated before.</p>
+<div class="row" ng-switch="user.Preferences.length">
+    <div ng-switch-when="0">
+        <div class="alert alert-info" role="alert"> <strong>Heads up!</strong> You have not evaluated any image yet. </div>
+    </div>
+    <div ng-switch-default class="col-md-3 col-xs-6" ng-repeat="preference in user.Preferences"> 
+        <div class="thumbnail text-center"> 
+            <img src="{{preference.Image.File}}" data-holder-rendered="true" style="height: auto; width: 100%; display: block;">
+            <div class="caption"><p>{{preference.Image.Description}}</p></div>
+            <span ng-if="preference.Like" class="btn btn-primary" style="cursor:initial">
+                <i class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></i> Like</span>
+            <span ng-if="!preference.Like" class="btn btn-default" style="cursor:initial">
+                <i class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></i> Dislike</span>
+        </div>         
+    </div>
+</div>
